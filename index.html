@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+<body>
+    <header class="jumbotron text-white bg-info">
+        <h1 class="display-4 text-center">Weather Dashboard</h1>
+    </header>
+
+    <main class="container">
+        <section class="row">
+            <article class="col-md-3">
+                <h4>Search for a city</h4>
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" id="search-input" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn my-1 my-sm-2 bg-info text-white" id="search-button" type="submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                          </svg>
+                    </button>
+                </form>
+                <br>
+                <div class="card" style="">
+                    <ul class="list-group list-group-flush" id="search-history"></ul>
+                </div>
+            </article>
+
+            <article class="col-md-9">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <h6 class="card-title inline-block" id="cityName"></h6>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="" id="icon-w" style="margin-top: -15px;" alt="Weather Image">
+                            </div>
+                        </div>
+                        <p class="card-text">
+                            <h6>Temperature: <span id="temperatureSet"></span></h6>
+                            <h6>Humidity: <span id="humiditySet"></span></h6>
+                            <h6>Wind Speed: <span id="windSet"></span></h6>
+                            <h6>UV Index: <span id="uvSet" class="badge badge-danger"></span></h6>
+                        </p>
+                    </div>
+                </div>
+            </article>
+
+            <article class="row">
+                <div class="col-lg-12">
+                    <h3>5:Day Forcast:</h3>
+                </div>
+                <div class="col=lg-12">
+                    <div class="row" id="forecast"></div>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
